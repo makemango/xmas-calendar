@@ -19,17 +19,16 @@ add_action( 'wp_enqueue_scripts', 'custom_enqueue_files' );
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/makemango/custom-mangos',
+	'https://github.com/makemango/xmas-calendar/',
 	__FILE__,
-	'custom-mangos'
+	'xmas-calendar'
 );
 
 //Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('393c629340ea5ad57618a80164be637fae3bc451');
+// $myUpdateChecker->setAuthentication('393c629340ea5ad57618a80164be637fae3bc451');
 
 //Optional: Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('real-estate-base-template');
-
+$myUpdateChecker->setBranch('master');
 
 
 /**
