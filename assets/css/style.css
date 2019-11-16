@@ -9,6 +9,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4cdc6', endColorstr='#fefefd',GradientType=0 ); /* IE6-9 */
   background-repeat: none;
   background-attachment: fixed;
+  align-content: center;
 }
 
 
@@ -17,7 +18,7 @@ body {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Montserrat";
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -33,7 +34,7 @@ body {
   font-weight: 700;
 }
 .btn:hover {
-  background: #dc1029;
+  background: #000000;
 }
 
 .overlay {
@@ -559,7 +560,6 @@ label {
   transition: all 3000ms;
   border: 0px dashed transparent;
   min-height: 100%;
-  font-family: Montserrat;
 }
 
 
