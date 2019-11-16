@@ -27,14 +27,15 @@ body {
 .btn {
   padding: 5px 5px;
   display: inline-flex;
-  background: #EF233C;
-  color: white;
+  background: #000;
+  color: #f2cbc2;
   text-decoration: none;
   transition: 0.35s ease-in-out;
   font-weight: 700;
 }
 .btn:hover {
-  background: #000000;
+  background: red;
+  color: #f2cbc2;
 }
 
 .overlay {
