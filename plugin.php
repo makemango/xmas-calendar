@@ -54,9 +54,9 @@ function custom_enqueue_files() {
 if( function_exists('acf_add_options_page') ) {
 	
 	$parent = acf_add_options_page(array(
-		'page_title' 	=> 'Mango Setup',
-		'menu_title' 	=> 'Mango Setup',
-		'menu_slug' 	=> 'mango-panel',
+		'page_title' 	=> 'XMAS Calendar',
+		'menu_title' 	=> 'XMAS Calendar',
+		'menu_slug' 	=> 'xmas-calendar',
 		'capability' 	=> 'edit_posts',
 		'redirect' 		=> false
   ));
