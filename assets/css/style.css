@@ -558,7 +558,7 @@ label {
   transform-style: preserve-3d;
   transition: all 3000ms;
   border: 0px dashed transparent;
-
+  min-height: 100%;
 }
 
 
