@@ -47,7 +47,7 @@ function custom_enqueue_files() {
 	/**
 	 * loads JS files in the footer.
 	 */
-	 wp_enqueue_script( 'highlighjs', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', '', '9.9.0', true );
+	 wp_enqueue_script( 'highlightjs', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', '', '9.9.0', true );
 
 	// wp_enqueue_script( 'highlightjs-init', plugin_dir_url( __FILE__ ) . 'assets/js/highlight-init.js', '', '1.0.0', true );
 }
@@ -60,7 +60,8 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_slug' 	=> 'mango-panel',
 		'capability' 	=> 'edit_posts',
 		'redirect' 		=> false
-	));
+  ));
+}
 
 // submenus
 
@@ -82,7 +83,7 @@ if( function_exists('acf_add_options_page') ) {
 //	));
 
 	
-}
+
 
 
 add_action( 'wp_enqueue_scripts', 'wpse_load_plugin_css' );
@@ -101,8 +102,6 @@ function xmas_calendar()
           <div class='back'> 
             <b>5% auf alle Produkte</b>  
             <span><a href="#" class='btn open-modal' data-modal="#modal1">Öffnen</a></span>
-                </div>
-              </div>
           </div>
         </div>
       </input>
@@ -167,7 +166,6 @@ function xmas_calendar()
           <div class='back'>
               <b>5% auf alle Produkte</b>  
               <span><a href="#" class='btn open-modal' data-modal="#modal6">Öffnen</a></span>
-          </div>
           </div>
         </div>
       </input>
@@ -407,7 +405,7 @@ function xmas_calendar()
       </input>
     </label>
   </div>
-<section>
+</section>
 
 <section>
   <div class='modal' id='modal1'>

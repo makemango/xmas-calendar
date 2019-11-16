@@ -1,3 +1,8 @@
+(function($) {
+
+	   // $ Works! You can test it with next line if you like
+    // console.log($);
+
 $(".modal").each( function(){
 	$(this).wrap('<div class="overlay"></div>')
 });
@@ -44,25 +49,4 @@ $(".close-modal").on('click', function(e){
 	
 });
 
-$(".full-list")
-  .slice(0, 2)
-  .show();
-$(".full-list p:hidden").css("opacity", 0);
-$("#viewAll").on("click", function(e) {
-  $(".full-list p:hidden")
-    .slice(0, 5)
-    .slideDown("slow")
-    .animate(
-      {
-        opacity: 1
-      },
-      {
-        queue: false,
-        duration: "fast"
-      }
-    );
-  if ($(".full-list p:hidden").length == 0) {
-    $("#viewAll").fadeOut("slow");
-  }
-  e.preventDefault();
-});
+})( jQuery );
