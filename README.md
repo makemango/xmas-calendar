@@ -1,4 +1,4 @@
-# MakeMango XMAX Advent Calendar #
+# MakeMango XMAS Advent Calendar #
 
 
 
