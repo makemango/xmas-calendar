@@ -1,4 +1,4 @@
-# MakeMango Wordpress Control Dashboard #
+# MakeMango XMAX Advent Calendar #
 
 
 
