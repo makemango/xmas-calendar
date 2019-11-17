@@ -94,8 +94,8 @@ include(plugin_dir_path(__FILE__) . 'includes/initialize-custom-fields.php');
 
 function xmas_calendar()
 {
+ ?>
 
-?>
 
 
 <style>
@@ -300,6 +300,7 @@ section div {
     grid-area: t;
     background: url(<?php the_field('banner', 'option'); ?>);
     background-size: cover;
+
   }
   .day-1 {
     grid-area: d1;
@@ -730,33 +731,74 @@ label {
 
 </style>
 
-
-
-
+<?php
+date_default_timezone_set("Europe/Berlin");
+$today = strtotime(date('Y-m-d'));
+  
+  $day1 = strtotime('2019-11-01');
+  $day2 = strtotime('2019-11-02');
+  $day3 = strtotime('2019-11-03');
+  $day4 = strtotime('2019-11-04');
+  $day5 = strtotime('2019-11-05');
+  $day6 = strtotime('2019-11-06');
+  $day7 = strtotime('2019-11-07');
+  $day8 = strtotime('2019-11-08');
+  $day9 = strtotime('2019-11-09');
+  $day10 = strtotime('2019-11-10');
+  $day11 = strtotime('2019-11-11');
+  $day12 = strtotime('2019-11-12');
+  $day13 = strtotime('2019-11-13');
+  $day14 = strtotime('2019-11-14');
+  $day15 = strtotime('2019-11-15');
+  $day16 = strtotime('2019-11-16');
+  $day17 = strtotime('2019-11-17');
+  $day18 = strtotime('2019-11-18');
+  $day19 = strtotime('2019-11-19');
+  $day20 = strtotime('2019-11-20');
+  $day21 = strtotime('2019-11-21');
+  $day22 = strtotime('2019-11-22');
+  $day23 = strtotime('2019-11-23');
+  $day24 = strtotime('2019-11-24');
+?>
 
 <section class='grid-1 full-list'>
   <div class='title'></div>
+ 
+  
+
   <div class='day-1'>
     <label>
       <input type='checkbox'>
         <div class='door'>
           <div class='front'>1</div>
-          <div class='back'> 
+          <div class='back'>     
+          <?php if($today == $day1): ?>
             <b><?php the_field('day_text_back_1', 'option'); ?></b>  
             <span><a href="" class='btn open-modal' data-modal="#modal1">Öffnen</a></span>
+          <?php elseif($today < $day1): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
     </label>
   </div>
-  <div class='day-2'>
+    <div class='day-2'>
     <label>
       <input type='checkbox'>
         <div class='door'>
           <div class='front'>2</div>
           <div class='back'>
-          <b><?php the_field('day_text_back_2', 'option'); ?></b>  
-            <span><a href="#" class='btn open-modal' data-modal="#modal2">Öffnen</a></span>
+          <?php if($today == $day2): ?>
+            <b><?php the_field('day_text_back_2', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal2">Öffnen</a></span>
+          <?php elseif($today < $day2): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -768,8 +810,14 @@ label {
         <div class='door'>
           <div class='front'>3</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_3', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal3">Öffnen</a></span>
+          <?php if($today == $day3): ?>
+            <b><?php the_field('day_text_back_3', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal3">Öffnen</a></span>
+          <?php elseif($today < $day3): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -781,8 +829,15 @@ label {
         <div class='door'>
           <div class='front'>4</div>
           <div class='back'>
+          <?php if($today == $day4): ?>
             <b><?php the_field('day_text_back_4', 'option'); ?></b>  
-            <span><a href="#" class='btn open-modal' data-modal="#modal4">Öffnen</a></span></div>
+            <span><a href="" class='btn open-modal' data-modal="#modal4">Öffnen</a></span>
+          <?php elseif($today < $day4): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
+          </div>
         </div>
       </input>
     </label>
@@ -793,8 +848,14 @@ label {
         <div class='door'>
           <div class='front'>5</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_5', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal5">Öffnen</a></span>
+          <?php if($today == $day5): ?>
+            <b><?php the_field('day_text_back_5', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal5">Öffnen</a></span>
+          <?php elseif($today < $day5): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -806,8 +867,14 @@ label {
         <div class='door'>
           <div class='front'>6</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_6', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal6">Öffnen</a></span>
+          <?php if($today == $day6): ?>
+            <b><?php the_field('day_text_back_6', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal6">Öffnen</a></span>
+          <?php elseif($today < $day6): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -819,8 +886,14 @@ label {
         <div class='door'>
           <div class='front'>7</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_7', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal7">Öffnen</a></span>
+          <?php if($today == $day7): ?>
+            <b><?php the_field('day_text_back_7', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal7">Öffnen</a></span>
+          <?php elseif($today < $day7): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -832,8 +905,14 @@ label {
         <div class='door'>
           <div class='front'>8</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_8', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal8">Öffnen</a></span>
+          <?php if($today == $day8): ?>
+            <b><?php the_field('day_text_back_8', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal8">Öffnen</a></span>
+          <?php elseif($today < $day8): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -845,8 +924,14 @@ label {
         <div class='door'>
           <div class='front'>9</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_9', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal9">Öffnen</a></span>
+          <?php if($today == $day9): ?>
+            <b><?php the_field('day_text_back_9', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal9">Öffnen</a></span>
+          <?php elseif($today < $day9): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -858,8 +943,14 @@ label {
         <div class='door'>
           <div class='front'>10</div>
           <div class='back'>
-          <b><?php the_field('day_text_back_10', 'option'); ?></b>  
-            <span><a href="#" class='btn open-modal' data-modal="#modal10">Öffnen</a></span>
+          <?php if($today == $day10): ?>
+            <b><?php the_field('day_text_back_10', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal10">Öffnen</a></span>
+          <?php elseif($today < $day10): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>                  
       </input>
@@ -871,8 +962,14 @@ label {
         <div class='door'>
           <div class='front'>11</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_11', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal11">Öffnen</a></span>
+          <?php if($today == $day11): ?>
+            <b><?php the_field('day_text_back_11', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal11">Öffnen</a></span>
+          <?php elseif($today < $day11): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -884,8 +981,14 @@ label {
         <div class='door'>
           <div class='front'>12</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_12', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal12">Öffnen</a></span>
+          <?php if($today == $day12): ?>
+            <b><?php the_field('day_text_back_12', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal12">Öffnen</a></span>
+          <?php elseif($today < $day12): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -897,8 +1000,14 @@ label {
         <div class='door'>
           <div class='front'>13</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_13', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal13">Öffnen</a></span>
+          <?php if($today == $day13): ?>
+            <b><?php the_field('day_text_back_13', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal13">Öffnen</a></span>
+          <?php elseif($today < $day13): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -910,8 +1019,14 @@ label {
         <div class='door'>
           <div class='front'>14</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_14', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal14">Öffnen</a></span>
+          <?php if($today == $day14): ?>
+            <b><?php the_field('day_text_back_14', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal14">Öffnen</a></span>
+          <?php elseif($today < $day14): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -923,8 +1038,14 @@ label {
         <div class='door'>
           <div class='front'>15</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_15', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal15">Öffnen</a></span>
+          <?php if($today == $day15): ?>
+            <b><?php the_field('day_text_back_15', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal15">Öffnen</a></span>
+          <?php elseif($today < $day15): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -936,8 +1057,14 @@ label {
         <div class='door'>
           <div class='front'>16</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_16', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal16">Öffnen</a></span>
+          <?php if($today == $day16): ?>
+            <b><?php the_field('day_text_back_16', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal16">Öffnen</a></span>
+          <?php elseif($today < $day16): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -949,8 +1076,14 @@ label {
         <div class='door'>
           <div class='front'>17</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_17', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal17">Öffnen</a></span>
+          <?php if($today > $day17): ?>
+            <b>Leider schon vorbei!</b> 
+          <?php elseif($today < $day17): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b><?php the_field('day_text_back_17', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal17">Öffnen</a></span>
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -962,8 +1095,14 @@ label {
         <div class='door'>
           <div class='front'>18</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_18', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal18">Öffnen</a></span>
+          <?php if($today > $day18): ?>        
+            <b>Leider schon vorbei!</b>
+          <?php elseif($today < $day18): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?>  
+            <b><?php the_field('day_text_back_18', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal18">Öffnen</a></span> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -975,8 +1114,14 @@ label {
         <div class='door'>
           <div class='front'>19</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_19', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal19">Öffnen</a></span>
+          <?php if($today == $day19): ?>
+            <b><?php the_field('day_text_back_19', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal19">Öffnen</a></span>
+          <?php elseif($today < $day19): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -988,8 +1133,14 @@ label {
         <div class='door'>
           <div class='front'>20</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_20', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal20">Öffnen</a></span>
+          <?php if($today == $day20): ?>
+            <b><?php the_field('day_text_back_20', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal20">Öffnen</a></span>
+          <?php elseif($today < $day20): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -1001,8 +1152,14 @@ label {
         <div class='door'>
           <div class='front'>21</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_21', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal21">Öffnen</a></span>
+          <?php if($today == $day21): ?>
+            <b><?php the_field('day_text_back_21', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal21">Öffnen</a></span>
+          <?php elseif($today < $day21): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -1014,8 +1171,14 @@ label {
         <div class='door'>
           <div class='front'>22</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_22', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal22">Öffnen</a></span>
+          <?php if($today == $day22): ?>
+            <b><?php the_field('day_text_back_22', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal22">Öffnen</a></span>
+          <?php elseif($today < $day22): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -1027,8 +1190,14 @@ label {
         <div class='door'>
           <div class='front'>23</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_23', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal23">Öffnen</a></span>
+          <?php if($today == $day23): ?>
+            <b><?php the_field('day_text_back_23', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal23">Öffnen</a></span>
+          <?php elseif($today < $day23): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -1040,8 +1209,14 @@ label {
         <div class='door'>
           <div class='front'>24</div>
           <div class='back'>
-              <b><?php the_field('day_text_back_24', 'option'); ?></b>  
-              <span><a href="#" class='btn open-modal' data-modal="#modal24">Öffnen</a></span>
+          <?php if($today == $day24): ?>
+            <b><?php the_field('day_text_back_24', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal24">Öffnen</a></span>
+          <?php elseif($today < $day24): ?>
+            <b>Komm bald wieder!</b>
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
+          <?php endif; ?>
           </div>
         </div>
       </input>
@@ -1267,2458 +1442,16 @@ label {
                                                     </div>	
                                                   </div>
 
+
+                                                  
+
 </section>
 
 <?php
- 
 }
+
 add_shortcode('xmas', 'xmas_calendar');
 add_action( 'wp_enqueue_scripts', 'wpse_load_plugin_css' );
 
 ?>
 
-<?php
-if( function_exists('acf_add_local_field_group') ):
-
-acf_add_local_field_group(array(
-	'key' => 'group_5dcf528373dfd',
-	'title' => 'XmasCalendar',
-	'fields' => array(
-		array(
-			'key' => 'field_5dd15255efeb8',
-			'label' => 'Banner',
-			'name' => 'banner',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'thumbnail',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd155852b55c',
-			'label' => 'Logo',
-			'name' => 'logo',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'thumbnail',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd07bbf29f9f',
-			'label' => 'Hintergrund Rückseiten',
-			'name' => 'day_bg_back',
-			'type' => 'color_picker',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-		),
-		array(
-			'key' => 'field_5dd0748a3e6e4',
-			'label' => 'Tag_1',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd074943e6e5',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_1',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd074c73e6e6',
-			'label' => 'Text',
-			'name' => 'day_text_back_1',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd074e03e6e7',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_1',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd074f53e6e8',
-			'label' => 'Button Link',
-			'name' => 'modal_link_1',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15f9bfa5d8',
-			'label' => 'Tag_2',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15c7efa577',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_2',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cc3fa592',
-			'label' => 'Text',
-			'name' => 'day_text_back_2',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15cf2fa5a9',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_2',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d18fa5c0',
-			'label' => 'Button Link',
-			'name' => 'modal_link_2',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15f9dfa5d9',
-			'label' => 'Tag_3',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15c95fa57c',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_3',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cc5fa593',
-			'label' => 'Text',
-			'name' => 'day_text_back_3',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15cf4fa5aa',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_3',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d19fa5c1',
-			'label' => 'Button Link',
-			'name' => 'modal_link_3',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15f9efa5da',
-			'label' => 'Tag_4',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15c98fa57d',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_4',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cc7fa594',
-			'label' => 'Text',
-			'name' => 'day_text_back_4',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15cf5fa5ab',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_4',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d1afa5c2',
-			'label' => 'Button Link',
-			'name' => 'modal_link_4',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15f9ffa5db',
-			'label' => 'Tag_5',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15c9afa57e',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_5',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cc8fa595',
-			'label' => 'Text',
-			'name' => 'day_text_back_5',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15cf7fa5ac',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_5',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d1bfa5c3',
-			'label' => 'Button Link',
-			'name' => 'modal_link_5',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fa0fa5dc',
-			'label' => 'Tag_6',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15c9bfa57f',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_6',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cccfa596',
-			'label' => 'Text',
-			'name' => 'day_text_back_6',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15cf9fa5ad',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_6',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d1cfa5c4',
-			'label' => 'Button Link',
-			'name' => 'modal_link_6',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fa2fa5dd',
-			'label' => 'Tag_7',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15c9dfa580',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_7',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15ccdfa597',
-			'label' => 'Text',
-			'name' => 'day_text_back_7',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15cfafa5ae',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_7',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d1dfa5c5',
-			'label' => 'Button Link',
-			'name' => 'modal_link_7',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fa3fa5de',
-			'label' => 'Tag_8',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15c9efa581',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_8',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15ccffa598',
-			'label' => 'Text',
-			'name' => 'day_text_back_8',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15cfdfa5af',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_8',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d1ffa5c6',
-			'label' => 'Button Link',
-			'name' => 'modal_link_8',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fa4fa5df',
-			'label' => 'Tag_9',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15ca1fa582',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_9',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cd0fa599',
-			'label' => 'Text',
-			'name' => 'day_text_back_9',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15cfffa5b0',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_9',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d1ffa5c7',
-			'label' => 'Button Link',
-			'name' => 'modal_link_9',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fa5fa5e0',
-			'label' => 'Tag_10',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15ca3fa583',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_10',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cd2fa59a',
-			'label' => 'Text',
-			'name' => 'day_text_back_10',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d00fa5b1',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_10',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d21fa5c8',
-			'label' => 'Button Link',
-			'name' => 'modal_link_10',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fa6fa5e1',
-			'label' => 'Tag_11',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15ca4fa584',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_11',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cd4fa59b',
-			'label' => 'Text',
-			'name' => 'day_text_back_11',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d02fa5b2',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_11',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d22fa5c9',
-			'label' => 'Button Link',
-			'name' => 'modal_link_11',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fa7fa5e2',
-			'label' => 'Tag_12',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15ca6fa585',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_12',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cd6fa59c',
-			'label' => 'Text',
-			'name' => 'day_text_back_12',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d04fa5b3',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_12',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d23fa5ca',
-			'label' => 'Button Link',
-			'name' => 'modal_link_12',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fa9fa5e3',
-			'label' => 'Tag_13',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15ca8fa586',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_13',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cd8fa59d',
-			'label' => 'Text',
-			'name' => 'day_text_back_13',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d05fa5b4',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_13',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d24fa5cb',
-			'label' => 'Button Link',
-			'name' => 'modal_link_13',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15faafa5e4',
-			'label' => 'Tag_14',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15ca9fa587',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_14',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cd9fa59e',
-			'label' => 'Text',
-			'name' => 'day_text_back_14',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d07fa5b5',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_14',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d25fa5cc',
-			'label' => 'Button Link',
-			'name' => 'modal_link_14',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fabfa5e5',
-			'label' => 'Tag_15',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cadfa588',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_15',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cdbfa59f',
-			'label' => 'Text',
-			'name' => 'day_text_back_15',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d09fa5b6',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_15',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d26fa5cd',
-			'label' => 'Button Link',
-			'name' => 'modal_link_15',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15facfa5e6',
-			'label' => 'Tag_16',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15caffa589',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_16',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cddfa5a0',
-			'label' => 'Text',
-			'name' => 'day_text_back_16',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d0afa5b7',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_16',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d27fa5ce',
-			'label' => 'Button Link',
-			'name' => 'modal_link_16',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fadfa5e7',
-			'label' => 'Tag_17',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cb0fa58a',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_17',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15ce0fa5a1',
-			'label' => 'Text',
-			'name' => 'day_text_back_17',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d0bfa5b8',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_17',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d29fa5cf',
-			'label' => 'Button Link',
-			'name' => 'modal_link_17',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15faefa5e8',
-			'label' => 'Tag_18',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cb2fa58b',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_18',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15ce2fa5a2',
-			'label' => 'Text',
-			'name' => 'day_text_back_18',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d0cfa5b9',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_18',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d2afa5d0',
-			'label' => 'Button Link',
-			'name' => 'modal_link_18',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15faffa5e9',
-			'label' => 'Tag_19',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cb3fa58c',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_19',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15ce3fa5a3',
-			'label' => 'Text',
-			'name' => 'day_text_back_19',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d0efa5ba',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_19',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d2bfa5d1',
-			'label' => 'Button Link',
-			'name' => 'modal_link_19',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fb1fa5ea',
-			'label' => 'Tag_20',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cb5fa58d',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_20',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15ce5fa5a4',
-			'label' => 'Text',
-			'name' => 'day_text_back_20',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d10fa5bb',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_20',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d2cfa5d2',
-			'label' => 'Button Link',
-			'name' => 'modal_link_20',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fb2fa5eb',
-			'label' => 'Tag_21',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cb8fa58e',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_21',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15ce6fa5a5',
-			'label' => 'Text',
-			'name' => 'day_text_back_21',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d11fa5bc',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_21',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d2dfa5d3',
-			'label' => 'Button Link',
-			'name' => 'modal_link_21',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fb3fa5ec',
-			'label' => 'Tag_22',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cb9fa58f',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_22',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15ce8fa5a6',
-			'label' => 'Text',
-			'name' => 'day_text_back_22',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d12fa5bd',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_22',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d2efa5d4',
-			'label' => 'Button Link',
-			'name' => 'modal_link_22',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fb4fa5ed',
-			'label' => 'Tag_23',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cbcfa590',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_23',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cebfa5a7',
-			'label' => 'Text',
-			'name' => 'day_text_back_23',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d13fa5be',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_23',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d2ffa5d5',
-			'label' => 'Button Link',
-			'name' => 'modal_link_23',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15fb5fa5ee',
-			'label' => 'Tag_24',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5dd15cbffa591',
-			'label' => 'Hintergrund',
-			'name' => 'day_bg_24',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'url',
-			'preview_size' => 'medium',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5dd15cedfa5a8',
-			'label' => 'Text',
-			'name' => 'day_text_back_24',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
-			'key' => 'field_5dd15d15fa5bf',
-			'label' => 'Modal Text',
-			'name' => 'modal_text_24',
-			'type' => 'wysiwyg',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'tabs' => 'all',
-			'toolbar' => 'full',
-			'media_upload' => 1,
-			'delay' => 0,
-		),
-		array(
-			'key' => 'field_5dd15d31fa5d6',
-			'label' => 'Button Link',
-			'name' => 'modal_link_24',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'xmas-calendar',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
-
-endif;
-
-?>
