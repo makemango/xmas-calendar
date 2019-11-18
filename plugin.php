@@ -17,12 +17,12 @@ if ( ! defined( 'WPINC' ) ) {
 
 add_action( 'wp_enqueue_scripts', 'custom_enqueue_files' );
 
-// require 'plugin-update-checker/plugin-update-checker.php';
-//$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	//'https://github.com/makemango/xmas-calendar/',
-	//__FILE__,
-	//'xmas-calendar'
-// );
+ require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/makemango/xmas-calendar/',
+	__FILE__,
+	'xmas-calendar'
+ );
 
 //Optional: If you're using a private repository, specify the access token like this:
 // $myUpdateChecker->setAuthentication('');
