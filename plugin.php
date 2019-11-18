@@ -3,7 +3,7 @@
 Plugin Name:	Xmas Calendar 
 Plugin URI:		
 Description:	Customizable Xmas Calendar
-Version:		1.0
+Version:		1.0.1
 Author:			MakeMango
 Author URI:		https://mangos.bz
 License:		GPL-2.0+
