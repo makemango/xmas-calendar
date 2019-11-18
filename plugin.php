@@ -734,31 +734,32 @@ label {
 <?php
 date_default_timezone_set("Europe/Berlin");
 $today = strtotime(date('Y-m-d'));
+$month = get_field('x_month', 'option');
   
-  $day1 = strtotime('2019-11-01');
-  $day2 = strtotime('2019-11-02');
-  $day3 = strtotime('2019-11-03');
-  $day4 = strtotime('2019-11-04');
-  $day5 = strtotime('2019-11-05');
-  $day6 = strtotime('2019-11-06');
-  $day7 = strtotime('2019-11-07');
-  $day8 = strtotime('2019-11-08');
-  $day9 = strtotime('2019-11-09');
-  $day10 = strtotime('2019-11-10');
-  $day11 = strtotime('2019-11-11');
-  $day12 = strtotime('2019-11-12');
-  $day13 = strtotime('2019-11-13');
-  $day14 = strtotime('2019-11-14');
-  $day15 = strtotime('2019-11-15');
-  $day16 = strtotime('2019-11-16');
-  $day17 = strtotime('2019-11-17');
-  $day18 = strtotime('2019-11-18');
-  $day19 = strtotime('2019-11-19');
-  $day20 = strtotime('2019-11-20');
-  $day21 = strtotime('2019-11-21');
-  $day22 = strtotime('2019-11-22');
-  $day23 = strtotime('2019-11-23');
-  $day24 = strtotime('2019-11-24');
+  $day1 = strtotime("2019-{$month}-01");
+  $day2 = strtotime("2019-{$month}-02");
+  $day3 = strtotime("2019-{$month}-03");
+  $day4 = strtotime("2019-{$month}-04");
+  $day5 = strtotime("2019-{$month}-05");
+  $day6 = strtotime("2019-{$month}-06");
+  $day7 = strtotime("2019-{$month}-07");
+  $day8 = strtotime("2019-{$month}-08");
+  $day9 = strtotime("2019-{$month}-09");
+  $day10 = strtotime("2019-{$month}-10");
+  $day11 = strtotime("2019-{$month}-11");
+  $day12 = strtotime("2019-{$month}-12");
+  $day13 = strtotime("2019-{$month}-13");
+  $day14 = strtotime("2019-{$month}-14");
+  $day15 = strtotime("2019-{$month}-15");
+  $day16 = strtotime("2019-{$month}-16");
+  $day17 = strtotime("2019-{$month}-17");
+  $day18 = strtotime("2019-{$month}-18");
+  $day19 = strtotime("2019-{$month}-19");
+  $day20 = strtotime("2019-{$month}-20");
+  $day21 = strtotime("2019-{$month}-21");
+  $day22 = strtotime("2019-{$month}-22");
+  $day23 = strtotime("2019-{$month}-23");
+  $day24 = strtotime("2019-{$month}-24");
 ?>
 
 <section class='grid-1 full-list'>
@@ -1076,13 +1077,13 @@ $today = strtotime(date('Y-m-d'));
         <div class='door'>
           <div class='front'>17</div>
           <div class='back'>
-          <?php if($today > $day17): ?>
-            <b>Leider schon vorbei!</b> 
+          <?php if($today == $day17): ?>
+            <b><?php the_field('day_text_back_17', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal17">Öffnen</a></span>
           <?php elseif($today < $day17): ?>
             <b>Komm bald wieder!</b>
           <?php else: ?> 
-            <b><?php the_field('day_text_back_17', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal17">Öffnen</a></span>
+            <b>Leider schon vorbei!</b> 
           <?php endif; ?>
           </div>
         </div>
@@ -1095,13 +1096,13 @@ $today = strtotime(date('Y-m-d'));
         <div class='door'>
           <div class='front'>18</div>
           <div class='back'>
-          <?php if($today > $day18): ?>        
-            <b>Leider schon vorbei!</b>
+          <?php if($today == $day18): ?>
+            <b><?php the_field('day_text_back_18', 'option'); ?></b>  
+            <span><a href="" class='btn open-modal' data-modal="#modal18">Öffnen</a></span>
           <?php elseif($today < $day18): ?>
             <b>Komm bald wieder!</b>
-          <?php else: ?>  
-            <b><?php the_field('day_text_back_18', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal18">Öffnen</a></span> 
+          <?php else: ?> 
+            <b>Leider schon vorbei!</b> 
           <?php endif; ?>
           </div>
         </div>
@@ -1117,9 +1118,9 @@ $today = strtotime(date('Y-m-d'));
           <?php if($today == $day19): ?>
             <b><?php the_field('day_text_back_19', 'option'); ?></b>  
             <span><a href="" class='btn open-modal' data-modal="#modal19">Öffnen</a></span>
-          <?php elseif($today < $day19): ?>
+          <?php elseif($today < $day19): ?>   
             <b>Komm bald wieder!</b>
-          <?php else: ?> 
+          <?php else: ?>         
             <b>Leider schon vorbei!</b> 
           <?php endif; ?>
           </div>
@@ -1174,9 +1175,9 @@ $today = strtotime(date('Y-m-d'));
           <?php if($today == $day22): ?>
             <b><?php the_field('day_text_back_22', 'option'); ?></b>  
             <span><a href="" class='btn open-modal' data-modal="#modal22">Öffnen</a></span>
-          <?php elseif($today < $day22): ?>
-            <b>Komm bald wieder!</b>
-          <?php else: ?> 
+          <?php elseif($today < $day22): ?> 
+            <b>Komm bald wieder!</b>          <?php else: ?> 
+
             <b>Leider schon vorbei!</b> 
           <?php endif; ?>
           </div>
@@ -1447,6 +1448,11 @@ $today = strtotime(date('Y-m-d'));
 
 </section>
 
+<div style="background:red;">
+<?php
+
+echo(date_format($day1,"Y/m/d")); ?>
+</div>
 <?php
 }
 

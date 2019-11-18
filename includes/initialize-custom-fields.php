@@ -7,6 +7,27 @@ acf_add_local_field_group(array(
 	'title' => 'XmasCalendar',
 	'fields' => array(
 		array(
+			'key' => 'field_5dd1e05865771',
+			'label' => 'Monat',
+			'name' => 'x_month',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => 1,
+			'max' => 12,
+			'step' => '',
+		),
+		array(
 			'key' => 'field_5dd15255efeb8',
 			'label' => 'Banner',
 			'name' => 'banner',
