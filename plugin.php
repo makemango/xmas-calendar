@@ -683,7 +683,10 @@ label {
 .door {
   width: 100%;
   transform-style: preserve-3d;
-  transition: all 3000ms;
+  /* added */
+  transform-origin: center;
+  /* transition: all 3000ms; */
+  transition: all 0.5s ease-in-out;
   border: 0px dashed transparent;
   min-height: 100%;
 }
@@ -725,7 +728,9 @@ label {
 }
  
 :checked + .door {
-  transform: rotateY(180deg);
+   transform: rotateY(180deg); 
+ /* transform: perspective(4000px) translateZ(0px) translateX(100%) translateY(0px) rotateY(-180deg);*/
+ /* -webkit-transform: perspective(4000px) translateZ(0px) translateX(100%) translateY(0px) rotateY(-180deg);*/
 }
 
 
