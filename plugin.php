@@ -1446,17 +1446,7 @@ $month = get_field('x_month', 'option');
                                                       <a class='btn' data-modal="#modal24" href="<?php the_field('modal_link_24','option');?>">Einlösen</a>
                                                     </div>	
                                                   </div>
-
-
-                                                  
-
 </section>
-
-
 <?php
 }
-
 add_shortcode('xmas', 'xmas_calendar');
-
-?>
-
