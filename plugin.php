@@ -63,7 +63,7 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 // initiate custom fields on option pages
-include(plugin_dir_path(__FILE__) . 'includes/initialize-custom-fields.php');
+include_once(plugin_dir_path(__FILE__) . 'includes/initialize-custom-fields.php');
 
 // submenus
 
@@ -771,8 +771,7 @@ $month = get_field('x_month', 'option');
   <div class='title'></div>
  
   
-
-  <div class='day-1'>
+<div class='day-1'>
     <label>
       <input type='checkbox'>
         <div class='door'>
@@ -1453,16 +1452,12 @@ $month = get_field('x_month', 'option');
 
 </section>
 
-<div style="background:red;">
-<?php
 
-echo(date_format($day1,"Y/m/d")); ?>
-</div>
 <?php
 }
 
 add_shortcode('xmas', 'xmas_calendar');
-add_action( 'wp_enqueue_scripts', 'wpse_load_plugin_css' );
+add_action( 'wp_enqueue_scripts');
 
 ?>
 
