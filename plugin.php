@@ -1457,7 +1457,6 @@ $month = get_field('x_month', 'option');
 }
 
 add_shortcode('xmas', 'xmas_calendar');
-add_action( 'wp_enqueue_scripts');
 
 ?>
 
