@@ -101,20 +101,21 @@ function xmas_calendar()
 <style>
 
 
-body {
+/* body {
   background: #f4cdc6; /* Old browsers */
-  background: -moz-linear-gradient(top, #f4cdc6 0%, #f6d9d4 50%, #f6d9d4 52%, #fefefd 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #f4cdc6 0%,#f6d9d4 50%,#f6d9d4 52%,#fefefd 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #f4cdc6 0%,#f6d9d4 50%,#f6d9d4 52%,#fefefd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4cdc6', endColorstr='#fefefd',GradientType=0 ); /* IE6-9 */
-  background-repeat: none;
+  /*background: -moz-linear-gradient(top, #f4cdc6 0%, #f6d9d4 50%, #f6d9d4 52%, #fefefd 100%); /* FF3.6-15 */
+  /*background: -webkit-linear-gradient(top, #f4cdc6 0%,#f6d9d4 50%,#f6d9d4 52%,#fefefd 100%); /* Chrome10-25,Safari5.1-6 */
+  /*background: linear-gradient(to bottom, #f4cdc6 0%,#f6d9d4 50%,#f6d9d4 52%,#fefefd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4cdc6', endColorstr='#fefefd',GradientType=0 ); /* IE6-9 */
+  /*background-repeat: none; */
   background-attachment: fixed;
   align-content: center;
   font-family: "Montserrat";
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
+  /* min-height: 100vh; */
+  min-width: 100vw;
+ /* justify-content: center;
+  align-items: center; */
+} *
 
 
 * {
@@ -243,17 +244,22 @@ body {
   display: grid;
   /*width: 100%; */
   /* max-width: 1200px; */
-  width: 100vw;
-  height: 100vh;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 5px 5px 5px 5px;
+  background: #fff;
   
   
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-gap: 12px;
+  grid-gap: 6px;
+  
   
 
-  grid-template-areas:  "d23    d20     d12"
+  grid-template-areas:  "t    t     t"
+                        "t    t     t"
+                        "d23    d20     d12"
                         "d2     d14     d4"
                         "d5     d22     d16"
                         "d7     d7      d9"
@@ -270,10 +276,12 @@ body {
 @media only screen and (min-width: 900px) {
    
   .grid-1 {
-    width: 80vw;
-    height: 100vh;
-    padding: auto;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    /* background-image: linear-gradient(to bottom, #f4cdc6 0%,#f6d9d4 50%,#f6d9d4 52%,#fefefd 100%); */
+    grid-gap: 12px;
+    
     
     grid-template-columns: repeat(8, 1fr);
     grid-template-areas:    "d4      t       t       t      t t d7      d7"
@@ -300,13 +308,15 @@ section div {
     grid-area: t;
     background: url(<?php the_field('banner', 'option'); ?>);
     background-size: cover;
-
+    min-height: 300px;
+    background-position: center center;
   }
   .day-1 {
     grid-area: d1;
     background: url(<?php the_field('day_bg_1', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-1 .back {
     grid-area: d1;
@@ -322,6 +332,7 @@ section div {
     background: url(<?php the_field('day_bg_2', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-2 .back {
     grid-area: d2;
@@ -337,6 +348,7 @@ section div {
     background: url(<?php the_field('day_bg_3', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-3 .back {
     grid-area: d3;
@@ -352,6 +364,7 @@ section div {
     background: url(<?php the_field('day_bg_4', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-4 .back {
     grid-area: d4;
@@ -367,6 +380,7 @@ section div {
     background: url(<?php the_field('day_bg_5', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-5 .back {
     grid-area: d5;
@@ -382,6 +396,7 @@ section div {
     background: url(<?php the_field('day_bg_6', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-6 .back {
     grid-area: d6;
@@ -397,6 +412,7 @@ section div {
     background: url(<?php the_field('day_bg_7', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-7 .back {
     grid-area: d7;
@@ -412,6 +428,7 @@ section div {
     background: url(<?php the_field('day_bg_8', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-8 .back {
     grid-area: d8;
@@ -427,6 +444,7 @@ section div {
     background: url(<?php the_field('day_bg_9', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-9 .back {
     grid-area: d9;
@@ -442,6 +460,7 @@ section div {
     background: url(<?php the_field('day_bg_10', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-10 .back {
     grid-area: d10;
@@ -457,6 +476,7 @@ section div {
     background: url(<?php the_field('day_bg_11', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-11 .back {
     grid-area: d11;
@@ -472,6 +492,7 @@ section div {
     background: url(<?php the_field('day_bg_12', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-12 .back {
     grid-area: d12;
@@ -487,6 +508,7 @@ section div {
     background: url(<?php the_field('day_bg_13', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-13 .back {
     grid-area: d13;
@@ -502,6 +524,7 @@ section div {
     background: url(<?php the_field('day_bg_14', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-14 .back {
     grid-area: d14;
@@ -517,6 +540,7 @@ section div {
     background: url(<?php the_field('day_bg_15', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-15 .back {
     grid-area: d15;
@@ -532,6 +556,7 @@ section div {
     background: url(<?php the_field('day_bg_16', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-16 .back {
     grid-area: d16;
@@ -547,6 +572,7 @@ section div {
     background: url(<?php the_field('day_bg_17', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-17 .back {
     grid-area: d17;
@@ -562,6 +588,7 @@ section div {
     background: url(<?php the_field('day_bg_18', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-18 .back {
     grid-area: d18;
@@ -577,6 +604,7 @@ section div {
     background: url(<?php the_field('day_bg_19', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-19 .back {
     grid-area: d19;
@@ -592,6 +620,7 @@ section div {
     background: url(<?php the_field('day_bg_20', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-20 .back {
     grid-area: d20;
@@ -607,6 +636,7 @@ section div {
     background: url(<?php the_field('day_bg_21', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-21 .back {
     grid-area: d21;
@@ -622,6 +652,7 @@ section div {
     background: url(<?php the_field('day_bg_22', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-22 .back {
     grid-area: d22;
@@ -637,6 +668,7 @@ section div {
     background: url(<?php the_field('day_bg_23', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-23 .back {
     grid-area: d23;
@@ -652,6 +684,7 @@ section div {
     background: url(<?php the_field('day_bg_24', 'option'); ?>);
     background-size: cover;
     background-repeat: none;
+    background-position: center center;
   }
   .day-24 .back {
     grid-area: d24;
