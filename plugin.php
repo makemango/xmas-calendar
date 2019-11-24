@@ -248,7 +248,7 @@ function xmas_calendar()
   height: 100%;
   margin: 0px;
   padding: 5px 5px 5px 5px;
-  background: #fff;
+  background: #f3cbc3;
   
   
   grid-template-columns: 2fr 1fr 1fr;
@@ -325,7 +325,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-2 {
     grid-area: d2;
@@ -341,7 +341,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-3 {
     grid-area: d3;
@@ -357,7 +357,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-4 {
     grid-area: d4;
@@ -373,7 +373,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-5 {
     grid-area: d5;
@@ -389,7 +389,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-6 {
     grid-area: d6;
@@ -405,7 +405,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-7 {
     grid-area: d7;
@@ -421,7 +421,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-8 {
     grid-area: d8;
@@ -437,7 +437,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-9 {
     grid-area: d9;
@@ -453,7 +453,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-10 {
     grid-area: d10;
@@ -469,7 +469,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-11 {
     grid-area: d11;
@@ -485,7 +485,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-12 {
     grid-area: d12;
@@ -501,7 +501,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-13 {
     grid-area: d13;
@@ -517,7 +517,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-14 {
     grid-area: d14;
@@ -533,7 +533,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-15 {
     grid-area: d15;
@@ -549,7 +549,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-16 {
     grid-area: d16;
@@ -565,7 +565,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-17 {
     grid-area: d17;
@@ -581,7 +581,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-18 {
     grid-area: d18;
@@ -597,7 +597,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-19 {
     grid-area: d19;
@@ -613,7 +613,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-20 {
     grid-area: d20;
@@ -629,7 +629,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-21 {
     grid-area: d21;
@@ -645,7 +645,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-22 {
     grid-area: d22;
@@ -661,7 +661,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-23 {
     grid-area: d23;
@@ -677,7 +677,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
   .day-24 {
     grid-area: d24;
@@ -693,7 +693,7 @@ section div {
     background-repeat: none;
     display: inline-grid;
     justify-items: center;
-    padding: 15% 5% 10% 5%;
+    padding: 10% 5% 10% 5%;
   }
 
 /* door styles */
@@ -774,29 +774,29 @@ date_default_timezone_set("Europe/Berlin");
 $today = strtotime(date('Y-m-d'));
 $month = get_field('x_month', 'option');
   
-  $day1 = strtotime("2019-{$month}-01");
-  $day2 = strtotime("2019-{$month}-02");
-  $day3 = strtotime("2019-{$month}-03");
-  $day4 = strtotime("2019-{$month}-04");
-  $day5 = strtotime("2019-{$month}-05");
-  $day6 = strtotime("2019-{$month}-06");
-  $day7 = strtotime("2019-{$month}-07");
-  $day8 = strtotime("2019-{$month}-08");
-  $day9 = strtotime("2019-{$month}-09");
-  $day10 = strtotime("2019-{$month}-10");
-  $day11 = strtotime("2019-{$month}-11");
-  $day12 = strtotime("2019-{$month}-12");
-  $day13 = strtotime("2019-{$month}-13");
-  $day14 = strtotime("2019-{$month}-14");
-  $day15 = strtotime("2019-{$month}-15");
-  $day16 = strtotime("2019-{$month}-16");
-  $day17 = strtotime("2019-{$month}-17");
-  $day18 = strtotime("2019-{$month}-18");
-  $day19 = strtotime("2019-{$month}-19");
-  $day20 = strtotime("2019-{$month}-20");
-  $day21 = strtotime("2019-{$month}-21");
-  $day22 = strtotime("2019-{$month}-22");
-  $day23 = strtotime("2019-{$month}-23");
+  $day1 = strtotime("2019-{$month}-24");
+  $day2 = strtotime("2019-{$month}-24");
+  $day3 = strtotime("2019-{$month}-24");
+  $day4 = strtotime("2019-{$month}-24");
+  $day5 = strtotime("2019-{$month}-24");
+  $day6 = strtotime("2019-{$month}-24");
+  $day7 = strtotime("2019-{$month}-24");
+  $day8 = strtotime("2019-{$month}-24");
+  $day9 = strtotime("2019-{$month}-24");
+  $day10 = strtotime("2019-{$month}-24");
+  $day11 = strtotime("2019-{$month}-24");
+  $day12 = strtotime("2019-{$month}-24");
+  $day13 = strtotime("2019-{$month}-24");
+  $day14 = strtotime("2019-{$month}-24");
+  $day15 = strtotime("2019-{$month}-24");
+  $day16 = strtotime("2019-{$month}-24");
+  $day17 = strtotime("2019-{$month}-24");
+  $day18 = strtotime("2019-{$month}-24");
+  $day19 = strtotime("2019-{$month}-24");
+  $day20 = strtotime("2019-{$month}-24");
+  $day21 = strtotime("2019-{$month}-24");
+  $day22 = strtotime("2019-{$month}-24");
+  $day23 = strtotime("2019-{$month}-24");
   $day24 = strtotime("2019-{$month}-24");
 ?>
 
@@ -808,7 +808,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>1</div>
+          <div class='front'></div>
           <div class='back'>     
           <?php if($today == $day1): ?>
             <b><?php the_field('day_text_back_1', 'option'); ?></b>  
@@ -827,7 +827,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>2</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day2): ?>
             <b><?php the_field('day_text_back_2', 'option'); ?></b>  
@@ -846,11 +846,11 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>3</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day3): ?>
             <b><?php the_field('day_text_back_3', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal3">Öffnen</a></span>
+            <span><br><a href="" class='btn open-modal' data-modal="#modal3">Öffnen</a></span>
           <?php elseif($today < $day3): ?>
             <b>Komm bald wieder!</b>
           <?php else: ?> 
@@ -865,7 +865,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>4</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day4): ?>
             <b><?php the_field('day_text_back_4', 'option'); ?></b>  
@@ -884,7 +884,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>5</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day5): ?>
             <b><?php the_field('day_text_back_5', 'option'); ?></b>  
@@ -903,7 +903,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>6</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day6): ?>
             <b><?php the_field('day_text_back_6', 'option'); ?></b>  
@@ -922,11 +922,11 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>7</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day7): ?>
             <b><?php the_field('day_text_back_7', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal7">Öffnen</a></span>
+            <span><br><a href="" class='btn open-modal' data-modal="#modal7">Öffnen</a></span>
           <?php elseif($today < $day7): ?>
             <b>Komm bald wieder!</b>
           <?php else: ?> 
@@ -941,7 +941,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>8</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day8): ?>
             <b><?php the_field('day_text_back_8', 'option'); ?></b>  
@@ -960,11 +960,11 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>9</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day9): ?>
             <b><?php the_field('day_text_back_9', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal9">Öffnen</a></span>
+            <span><br><a href="" class='btn open-modal' data-modal="#modal9">Öffnen</a></span>
           <?php elseif($today < $day9): ?>
             <b>Komm bald wieder!</b>
           <?php else: ?> 
@@ -979,7 +979,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>10</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day10): ?>
             <b><?php the_field('day_text_back_10', 'option'); ?></b>  
@@ -998,7 +998,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>11</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day11): ?>
             <b><?php the_field('day_text_back_11', 'option'); ?></b>  
@@ -1017,7 +1017,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>12</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day12): ?>
             <b><?php the_field('day_text_back_12', 'option'); ?></b>  
@@ -1036,7 +1036,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>13</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day13): ?>
             <b><?php the_field('day_text_back_13', 'option'); ?></b>  
@@ -1055,11 +1055,11 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>14</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day14): ?>
             <b><?php the_field('day_text_back_14', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal14">Öffnen</a></span>
+            <span><br><a href="" class='btn open-modal' data-modal="#modal14">Öffnen</a></span>
           <?php elseif($today < $day14): ?>
             <b>Komm bald wieder!</b>
           <?php else: ?> 
@@ -1074,7 +1074,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>15</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day15): ?>
             <b><?php the_field('day_text_back_15', 'option'); ?></b>  
@@ -1093,7 +1093,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>16</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day16): ?>
             <b><?php the_field('day_text_back_16', 'option'); ?></b>  
@@ -1112,7 +1112,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>17</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day17): ?>
             <b><?php the_field('day_text_back_17', 'option'); ?></b>  
@@ -1131,7 +1131,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>18</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day18): ?>
             <b><?php the_field('day_text_back_18', 'option'); ?></b>  
@@ -1150,7 +1150,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>19</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day19): ?>
             <b><?php the_field('day_text_back_19', 'option'); ?></b>  
@@ -1169,11 +1169,11 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>20</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day20): ?>
             <b><?php the_field('day_text_back_20', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal20">Öffnen</a></span>
+            <span><br><a href="" class='btn open-modal' data-modal="#modal20">Öffnen</a></span>
           <?php elseif($today < $day20): ?>
             <b>Komm bald wieder!</b>
           <?php else: ?> 
@@ -1188,7 +1188,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>21</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day21): ?>
             <b><?php the_field('day_text_back_21', 'option'); ?></b>  
@@ -1207,11 +1207,11 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>22</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day22): ?>
             <b><?php the_field('day_text_back_22', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal22">Öffnen</a></span>
+            <span><br><a href="" class='btn open-modal' data-modal="#modal22">Öffnen</a></span>
           <?php elseif($today < $day22): ?> 
             <b>Komm bald wieder!</b>          <?php else: ?> 
 
@@ -1226,11 +1226,11 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>23</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day23): ?>
             <b><?php the_field('day_text_back_23', 'option'); ?></b>  
-            <span><a href="" class='btn open-modal' data-modal="#modal23">Öffnen</a></span>
+            <span><br><a href="" class='btn open-modal' data-modal="#modal23">Öffnen</a></span>
           <?php elseif($today < $day23): ?>
             <b>Komm bald wieder!</b>
           <?php else: ?> 
@@ -1245,7 +1245,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'>24</div>
+          <div class='front'></div>
           <div class='back'>
           <?php if($today == $day24): ?>
             <b><?php the_field('day_text_back_24', 'option'); ?></b>  
@@ -1276,7 +1276,7 @@ $month = get_field('x_month', 'option');
         <div class='content'>
           <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
           <p>
-          <span><?php the_field('modal_text_2','option');?></span>	
+          <span class="modaltext"><?php the_field('modal_text_2','option');?></span>	
           </p>
           <a class='btn' data-modal="#modal2" href="<?php the_field('modal_link_2','option');?>">Einlösen</a>
         </div>	
