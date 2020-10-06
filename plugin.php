@@ -3,7 +3,7 @@
 Plugin Name:	Xmas Calendar 
 Plugin URI:		
 Description:	Customizable Xmas Calendar
-Version:		1.0.3
+Version:		0.4
 Author:			MakeMango Industries
 Author URI:		https://makemango.com
 License:		GPL-2.0+
@@ -108,14 +108,14 @@ function xmas_calendar()
   padding: 5px 5px;
   display: inline-flex;
   background: #000;
-  color: #f2cbc2;
+  color: #fff;
   text-decoration: none;
   transition: 0.35s ease-in-out;
   font-weight: 700;
 }
 .btn:hover {
-  background: #f2cbc2;
-  color: #000;
+  background: #fff;
+  color: #109245;
 }
 
 .overlay {
@@ -177,6 +177,13 @@ function xmas_calendar()
   transform: translate(0, 0px);
   opacity: 1;
 }
+
+.overlay .modal.open .content img {
+  max-width: 25%!important;
+  margin: auto;
+  display:inline-block;
+}
+
 .overlay .modal .content {
   transform: translate(0, -10px);
   opacity: 0;
@@ -186,10 +193,11 @@ function xmas_calendar()
  
 }
 .overlay .modal .title {
-  margin-top: 1;
+  margin-top: 0;
   background: #fff;
   color: #fff;
 }
+
 
 @media only screen and (max-width: 600px) {
   .overlay {
@@ -214,22 +222,18 @@ function xmas_calendar()
   justify-content: center; 
 }
 
-.title img {
-  width: 90%;
-  height: auto;
-}
+
 
 /* mobile first grid layout */
 
 .grid-1 {
   display: grid;
-  /*width: 100%; */
   /* max-width: 1200px; */
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 5px 5px 5px 5px;
-  background: #f3cbc3;
+  background: none;
   
   
   grid-template-columns: 2fr 1fr 1fr;
@@ -722,10 +726,11 @@ label {
  }
  
  .door .front {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', sans-serif;
   font-size: 20px;
   font-weight: 800;
-  text-shadow: #000000;
+  text-shadow: #000;
+  color: #fff;
   }
 
  .door .back {
@@ -755,33 +760,32 @@ date_default_timezone_set("Europe/Berlin");
 $today = strtotime(date('Y-m-d'));
 $month = get_field('x_month', 'option');
   
-  $day1 = strtotime("2020-{$month}-24");
-  $day2 = strtotime("2020-{$month}-24");
-  $day3 = strtotime("2020-{$month}-24");
-  $day4 = strtotime("2020-{$month}-24");
-  $day5 = strtotime("2020-{$month}-24");
-  $day6 = strtotime("2020-{$month}-24");
-  $day7 = strtotime("2020-{$month}-24");
-  $day8 = strtotime("2020-{$month}-24");
-  $day9 = strtotime("2020-{$month}-24");
-  $day10 = strtotime("2020-{$month}-24");
-  $day11 = strtotime("2020-{$month}-24");
-  $day12 = strtotime("2020-{$month}-24");
-  $day13 = strtotime("2020-{$month}-24");
-  $day14 = strtotime("2020-{$month}-24");
-  $day15 = strtotime("2020-{$month}-24");
-  $day16 = strtotime("2020-{$month}-24");
-  $day17 = strtotime("2020-{$month}-24");
-  $day18 = strtotime("2020-{$month}-24");
-  $day19 = strtotime("2020-{$month}-24");
-  $day20 = strtotime("2020-{$month}-24");
-  $day21 = strtotime("2020-{$month}-24");
-  $day22 = strtotime("2020-{$month}-24");
-  $day23 = strtotime("2020-{$month}-24");
+  $day1 = strtotime("2020-{$month}-01");
+  $day2 = strtotime("2020-{$month}-02");
+  $day3 = strtotime("2020-{$month}-03");
+  $day4 = strtotime("2020-{$month}-04");
+  $day5 = strtotime("2020-{$month}-05");
+  $day6 = strtotime("2020-{$month}-06");
+  $day7 = strtotime("2020-{$month}-07");
+  $day8 = strtotime("2020-{$month}-08");
+  $day9 = strtotime("2020-{$month}-09");
+  $day10 = strtotime("2020-{$month}-10");
+  $day11 = strtotime("2020-{$month}-11");
+  $day12 = strtotime("2020-{$month}-12");
+  $day13 = strtotime("2020-{$month}-13");
+  $day14 = strtotime("2020-{$month}-14");
+  $day15 = strtotime("2020-{$month}-15");
+  $day16 = strtotime("2020-{$month}-16");
+  $day17 = strtotime("2020-{$month}-17");
+  $day18 = strtotime("2020-{$month}-18");
+  $day19 = strtotime("2020-{$month}-19");
+  $day20 = strtotime("2020-{$month}-20");
+  $day21 = strtotime("2020-{$month}-21");
+  $day22 = strtotime("2020-{$month}-22");
+  $day23 = strtotime("2020-{$month}-23");
   $day24 = strtotime("2020-{$month}-24");
 ?>
 
-// 
 
 <section class='grid-1 full-list'>
   <div class='title'></div>
@@ -791,7 +795,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>1</div>
           <div class='back'>     
           <?php if($today == $day1): ?>
             <b><?php the_field('day_text_back_1', 'option'); ?></b>  
@@ -810,7 +814,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>2</div>
           <div class='back'>
           <?php if($today == $day2): ?>
             <b><?php the_field('day_text_back_2', 'option'); ?></b>  
@@ -829,7 +833,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>3</div>
           <div class='back'>
           <?php if($today == $day3): ?>
             <b><?php the_field('day_text_back_3', 'option'); ?></b>  
@@ -848,7 +852,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>4</div>
           <div class='back'>
           <?php if($today == $day4): ?>
             <b><?php the_field('day_text_back_4', 'option'); ?></b>  
@@ -867,7 +871,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>5</div>
           <div class='back'>
           <?php if($today == $day5): ?>
             <b><?php the_field('day_text_back_5', 'option'); ?></b>  
@@ -886,7 +890,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>6</div>
           <div class='back'>
           <?php if($today == $day6): ?>
             <b><?php the_field('day_text_back_6', 'option'); ?></b>  
@@ -905,7 +909,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>7</div>
           <div class='back'>
           <?php if($today == $day7): ?>
             <b><?php the_field('day_text_back_7', 'option'); ?></b>  
@@ -924,7 +928,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>8</div>
           <div class='back'>
           <?php if($today == $day8): ?>
             <b><?php the_field('day_text_back_8', 'option'); ?></b>  
@@ -943,7 +947,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>9</div>
           <div class='back'>
           <?php if($today == $day9): ?>
             <b><?php the_field('day_text_back_9', 'option'); ?></b>  
@@ -962,7 +966,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>10</div>
           <div class='back'>
           <?php if($today == $day10): ?>
             <b><?php the_field('day_text_back_10', 'option'); ?></b>  
@@ -981,7 +985,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>11</div>
           <div class='back'>
           <?php if($today == $day11): ?>
             <b><?php the_field('day_text_back_11', 'option'); ?></b>  
@@ -1000,7 +1004,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>12</div>
           <div class='back'>
           <?php if($today == $day12): ?>
             <b><?php the_field('day_text_back_12', 'option'); ?></b>  
@@ -1019,7 +1023,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>13</div>
           <div class='back'>
           <?php if($today == $day13): ?>
             <b><?php the_field('day_text_back_13', 'option'); ?></b>  
@@ -1038,7 +1042,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>14</div>
           <div class='back'>
           <?php if($today == $day14): ?>
             <b><?php the_field('day_text_back_14', 'option'); ?></b>  
@@ -1057,7 +1061,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>15</div>
           <div class='back'>
           <?php if($today == $day15): ?>
             <b><?php the_field('day_text_back_15', 'option'); ?></b>  
@@ -1076,7 +1080,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>16</div>
           <div class='back'>
           <?php if($today == $day16): ?>
             <b><?php the_field('day_text_back_16', 'option'); ?></b>  
@@ -1095,7 +1099,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>17</div>
           <div class='back'>
           <?php if($today == $day17): ?>
             <b><?php the_field('day_text_back_17', 'option'); ?></b>  
@@ -1114,7 +1118,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>18</div>
           <div class='back'>
           <?php if($today == $day18): ?>
             <b><?php the_field('day_text_back_18', 'option'); ?></b>  
@@ -1133,7 +1137,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>19</div>
           <div class='back'>
           <?php if($today == $day19): ?>
             <b><?php the_field('day_text_back_19', 'option'); ?></b>  
@@ -1152,7 +1156,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>20</div>
           <div class='back'>
           <?php if($today == $day20): ?>
             <b><?php the_field('day_text_back_20', 'option'); ?></b>  
@@ -1171,7 +1175,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>21</div>
           <div class='back'>
           <?php if($today == $day21): ?>
             <b><?php the_field('day_text_back_21', 'option'); ?></b>  
@@ -1190,7 +1194,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>22</div>
           <div class='back'>
           <?php if($today == $day22): ?>
             <b><?php the_field('day_text_back_22', 'option'); ?></b>  
@@ -1209,7 +1213,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>23</div>
           <div class='back'>
           <?php if($today == $day23): ?>
             <b><?php the_field('day_text_back_23', 'option'); ?></b>  
@@ -1228,7 +1232,7 @@ $month = get_field('x_month', 'option');
     <label>
       <input type='checkbox'>
         <div class='door'>
-          <div class='front'></div>
+          <div class='front'>24</div>
           <div class='back'>
           <?php if($today == $day24): ?>
             <b><?php the_field('day_text_back_24', 'option'); ?></b>  
@@ -1248,7 +1252,7 @@ $month = get_field('x_month', 'option');
 <section>
   <div class='modal' id='modal1'>
       <div class='content'>
-        <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+        <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
         <p>
         <span><?php the_field('modal_text_1','option');?></span>
         </p>
@@ -1257,7 +1261,7 @@ $month = get_field('x_month', 'option');
     </div>
     <div class='modal' id='modal2'>
         <div class='content'>
-          <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+          <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
           <p>
           <span class="modaltext"><?php the_field('modal_text_2','option');?></span>	
           </p>
@@ -1266,7 +1270,7 @@ $month = get_field('x_month', 'option');
       </div>
       <div class='modal' id='modal3'>
           <div class='content'>
-            <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+            <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
             <p>
             <span><?php the_field('modal_text_3','option');?></span>	
             </p>
@@ -1275,7 +1279,7 @@ $month = get_field('x_month', 'option');
         </div>
         <div class='modal' id='modal4'>
             <div class='content'>
-              <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+              <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
               <p>
               <span><?php the_field('modal_text_4','option');?></span>
               </p>
@@ -1284,7 +1288,7 @@ $month = get_field('x_month', 'option');
           </div>
           <div class='modal' id='modal5'>
               <div class='content'>
-                <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                 <p>
                 <span><?php the_field('modal_text_5','option');?></span>	
                 </p>
@@ -1293,7 +1297,7 @@ $month = get_field('x_month', 'option');
             </div>
           <div class='modal' id='modal6'>
                 <div class='content'>
-                  <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                  <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                   <p>
                   <span><?php the_field('modal_text_6','option');?></span>	
                   </p>
@@ -1302,7 +1306,7 @@ $month = get_field('x_month', 'option');
               </div>
           <div class='modal' id='modal7'>
                   <div class='content'>
-                    <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                    <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                     <p>
                     <span><?php the_field('modal_text_7','option');?></span>	
                     </p>
@@ -1311,7 +1315,7 @@ $month = get_field('x_month', 'option');
                 </div>
           <div class='modal' id='modal8'>
                     <div class='content'>
-                      <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                      <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                       <p>
                       <span><?php the_field('modal_text_8','option');?></span>	
                       </p>
@@ -1320,7 +1324,7 @@ $month = get_field('x_month', 'option');
                   </div>
           <div class='modal' id='modal9'>
                       <div class='content'>
-                        <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                        <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                         <p>
                         <span><?php the_field('modal_text_9','option');?></span>	
                         </p>
@@ -1329,7 +1333,7 @@ $month = get_field('x_month', 'option');
                     </div>
           <div class='modal' id='modal10'>
                         <div class='content'>
-                          <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                          <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                           <p>
                           <span><?php the_field('modal_text_10','option');?></span>	
                           </p>
@@ -1338,7 +1342,7 @@ $month = get_field('x_month', 'option');
                       </div>
           <div class='modal' id='modal11'>
                           <div class='content'>
-                            <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                            <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                             <p>
                             <span><?php the_field('modal_text_11','option');?></span>	
                             </p>
@@ -1347,7 +1351,7 @@ $month = get_field('x_month', 'option');
                         </div>
           <div class='modal' id='modal12'>
                             <div class='content'>
-                              <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                              <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                               <p>
                               <span><?php the_field('modal_text_12','option');?></span>	
                               </p>
@@ -1356,7 +1360,7 @@ $month = get_field('x_month', 'option');
                           </div>
           <div class='modal' id='modal13'>
                            <div class='content'>
-                                <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                 <p>
                                 <span><?php the_field('modal_text_13','option');?></span>	
                                 </p>
@@ -1365,7 +1369,7 @@ $month = get_field('x_month', 'option');
                             </div>
           <div class='modal' id='modal14'>
                                <div class='content'>
-                                  <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                  <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                   <p>
                                   <span><?php the_field('modal_text_14','option');?></span>	
                                   </p>
@@ -1374,7 +1378,7 @@ $month = get_field('x_month', 'option');
                               </div>
           <div class='modal' id='modal15'>
                                   <div class='content'>
-                                    <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                    <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                     <p>
                                     <span><?php the_field('modal_text_15','option');?></span>	
                                     </p>
@@ -1383,7 +1387,7 @@ $month = get_field('x_month', 'option');
                                 </div>
           <div class='modal' id='modal16'>
                                     <div class='content'>
-                                      <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                      <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                       <p>
                                       <span><?php the_field('modal_text_16','option');?></span>	
                                       </p>
@@ -1392,7 +1396,7 @@ $month = get_field('x_month', 'option');
                                   </div>
           <div class='modal' id='modal17'>
                                       <div class='content'>
-                                        <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                        <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                         <p>
                                         <span><?php the_field('modal_text_17','option');?></span>	
                                         </p>
@@ -1401,7 +1405,7 @@ $month = get_field('x_month', 'option');
                                     </div>
           <div class='modal' id='modal18'>
                                         <div class='content'>
-                                          <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                          <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                           <p>
                                           <span><?php the_field('modal_text_18','option');?></span>	
                                           </p>
@@ -1410,7 +1414,7 @@ $month = get_field('x_month', 'option');
                                       </div>
           <div class='modal' id='modal19'>
                                           <div class='content'>
-                                            <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                            <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                             <p>
                                             <span><?php the_field('modal_text_19','option');?></span>	
                                             </p>
@@ -1419,7 +1423,7 @@ $month = get_field('x_month', 'option');
                                         </div>
           <div class='modal' id='modal20'>
                                             <div class='content'>
-                                              <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                              <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                               <p>
                                               <span><?php the_field('modal_text_20','option');?></span>	
                                               </p>
@@ -1428,7 +1432,7 @@ $month = get_field('x_month', 'option');
                                           </div>
           <div class='modal' id='modal21'>
                                               <div class='content'>
-                                                <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                                <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                                 <p>
                                                 <span><?php the_field('modal_text_21','option');?></span>	
                                                 </p>
@@ -1437,7 +1441,7 @@ $month = get_field('x_month', 'option');
                                             </div>
           <div class='modal' id='modal22'>
             <div class='content'>
-              <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+              <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                 <p>
                 <span><?php the_field('modal_text_22','option');?></span>	
                      </p>
@@ -1446,7 +1450,7 @@ $month = get_field('x_month', 'option');
                       </div>
           <div class='modal' id='modal23'>
                                                   <div class='content'>
-                                                    <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                                    <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                                     <p>
                                                     <span><?php the_field('modal_text_23','option');?></span>	
                                                     </p>
@@ -1455,7 +1459,7 @@ $month = get_field('x_month', 'option');
                                                 </div>
           <div class='modal' id='modal24'>
                                                     <div class='content'>
-                                                      <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Hanadi Beauty Adventskalender" /><br></h1>
+                                                      <h1 class='title_modal'><img src="<?php the_field('logo', 'option'); ?>" alt="Adventskalender" /><br></h1>
                                                       <p>
                                                       <span><?php the_field('modal_text_24','option');?></span>	
                                                       </p>
