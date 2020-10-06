@@ -3,9 +3,9 @@
 Plugin Name:	Xmas Calendar 
 Plugin URI:		
 Description:	Customizable Xmas Calendar
-Version:		1.0.2
-Author:			MakeMango
-Author URI:		https://mangos.bz
+Version:		1.0.3
+Author:			MakeMango Industries
+Author URI:		https://makemango.com
 License:		GPL-2.0+
 License URI:	http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -17,18 +17,6 @@ if ( ! defined( 'WPINC' ) ) {
 
 add_action( 'wp_enqueue_scripts', 'custom_enqueue_files' );
 
- require 'plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/makemango/xmas-calendar/',
-	__FILE__,
-	'xmas-calendar'
- );
-
-//Optional: If you're using a private repository, specify the access token like this:
-// $myUpdateChecker->setAuthentication('');
-
-//Optional: Set the branch that contains the stable release.
-// $myUpdateChecker->setBranch('master');
 
 
 /**
@@ -83,13 +71,6 @@ include_once(plugin_dir_path(__FILE__) . 'includes/initialize-custom-fields.php'
 //		'menu_title' 	=> 'Footer',
 //		'parent_slug' 	=> $parent['menu_slug'],
 //	));
-
-	
-
-
-
-
-
 
 
 function xmas_calendar()
@@ -774,31 +755,33 @@ date_default_timezone_set("Europe/Berlin");
 $today = strtotime(date('Y-m-d'));
 $month = get_field('x_month', 'option');
   
-  $day1 = strtotime("2019-{$month}-24");
-  $day2 = strtotime("2019-{$month}-24");
-  $day3 = strtotime("2019-{$month}-24");
-  $day4 = strtotime("2019-{$month}-24");
-  $day5 = strtotime("2019-{$month}-24");
-  $day6 = strtotime("2019-{$month}-24");
-  $day7 = strtotime("2019-{$month}-24");
-  $day8 = strtotime("2019-{$month}-24");
-  $day9 = strtotime("2019-{$month}-24");
-  $day10 = strtotime("2019-{$month}-24");
-  $day11 = strtotime("2019-{$month}-24");
-  $day12 = strtotime("2019-{$month}-24");
-  $day13 = strtotime("2019-{$month}-24");
-  $day14 = strtotime("2019-{$month}-24");
-  $day15 = strtotime("2019-{$month}-24");
-  $day16 = strtotime("2019-{$month}-24");
-  $day17 = strtotime("2019-{$month}-24");
-  $day18 = strtotime("2019-{$month}-24");
-  $day19 = strtotime("2019-{$month}-24");
-  $day20 = strtotime("2019-{$month}-24");
-  $day21 = strtotime("2019-{$month}-24");
-  $day22 = strtotime("2019-{$month}-24");
-  $day23 = strtotime("2019-{$month}-24");
-  $day24 = strtotime("2019-{$month}-24");
+  $day1 = strtotime("2020-{$month}-24");
+  $day2 = strtotime("2020-{$month}-24");
+  $day3 = strtotime("2020-{$month}-24");
+  $day4 = strtotime("2020-{$month}-24");
+  $day5 = strtotime("2020-{$month}-24");
+  $day6 = strtotime("2020-{$month}-24");
+  $day7 = strtotime("2020-{$month}-24");
+  $day8 = strtotime("2020-{$month}-24");
+  $day9 = strtotime("2020-{$month}-24");
+  $day10 = strtotime("2020-{$month}-24");
+  $day11 = strtotime("2020-{$month}-24");
+  $day12 = strtotime("2020-{$month}-24");
+  $day13 = strtotime("2020-{$month}-24");
+  $day14 = strtotime("2020-{$month}-24");
+  $day15 = strtotime("2020-{$month}-24");
+  $day16 = strtotime("2020-{$month}-24");
+  $day17 = strtotime("2020-{$month}-24");
+  $day18 = strtotime("2020-{$month}-24");
+  $day19 = strtotime("2020-{$month}-24");
+  $day20 = strtotime("2020-{$month}-24");
+  $day21 = strtotime("2020-{$month}-24");
+  $day22 = strtotime("2020-{$month}-24");
+  $day23 = strtotime("2020-{$month}-24");
+  $day24 = strtotime("2020-{$month}-24");
 ?>
+
+// 
 
 <section class='grid-1 full-list'>
   <div class='title'></div>
