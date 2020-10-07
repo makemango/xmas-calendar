@@ -1,20 +1,12 @@
 # MakeMango XMAS Advent Calendar #
 
-
-
-=== XMAS Calendar ===
-Contributors: makemango
-Tags: xmas, calendar, grid, modal
-Requires at least: 4.6
-Tested up to: 4.7
-Stable tag: 4.3
-Requires PHP: 5.2.4
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
 This is a simple Calendar Grid for Wordpress.
 
 ### Usage ###
+
+ACF Pro Plugin is needed to enable backend settings functionality.
+
+Install ACF Pro first and then the XMAS Calendar Plugin.
 
 Insert the Calendar to your page with the [xmas] shortcode.
 
