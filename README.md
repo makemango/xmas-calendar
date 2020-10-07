@@ -36,3 +36,7 @@ Open the plugin.php file to make further changes to the calendar and change the 
 1x block big tile - 500x320 (Day 16)  
 1x big 24 tile - 900x380  
 1x Banner - 900x380  
+
+### Known Issues ##
+
+-- Page Builder Preview broken  
