@@ -34,7 +34,7 @@ function custom_enqueue_files() {
 	/**
 	 * loads JS files in the footer.
 	 */
-	 wp_enqueue_script( 'highlightjs', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', '', '9.9.0', true );
+	 wp_enqueue_script( 'highlightjs', plugin_dir_url( __FILE__ ) . 'assets/js/script.js', array('jquery'), '9.9.0', true );
 
 	// wp_enqueue_script( 'highlightjs-init', plugin_dir_url( __FILE__ ) . 'assets/js/highlight-init.js', '', '1.0.0', true );
 }
@@ -178,7 +178,7 @@ function xmas_calendar()
   opacity: 1;
 }
 
-.overlay .modal.open .content img {
+.overlay .modal .content img {
   max-width: 25%!important;
   margin: auto;
   display:inline-block;
